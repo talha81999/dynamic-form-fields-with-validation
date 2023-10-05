@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.line{
+    width: 200px;
+    height: 2px;
+    background: lightgray;
+    
+}
+.profilecard{
+    display: flex;
+    justify-content: center;
+    display: table;
+    margin: auto;
+    padding: 0 50px;
+}
+.profileimg{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.profileimg img{
+    width: 100%;    
+    object-fit: cover;
+}
+
+.customfile input[type='file']{
+    display: none;
+}
+.customfile label{
+    cursor: pointer;
+    text-align: center;
+    display: table;
+    margin: auto;
+    margin-top: 15px;
+}
+
+
+
+.form-upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.form-upper-input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: start;
+}
+
+
+span{
+    text-decoration: underline;
+}
+
+.form-mid{
+    width: 80%;
+    border: 1px solid red;
+    margin-top: 40px;
+    display: flex;
+}
+
+.image-box{
+    width: 150px;
+}
+
+div.col-md-6.mid-content{
+    display: flex;
+  flex-direction: column;
+    gap: 5px;
+}

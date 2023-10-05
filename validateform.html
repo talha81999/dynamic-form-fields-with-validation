@@ -1,0 +1,251 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+  <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Bootstrap SignUp</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    .error{
+        color:red;
+        text-decoration:none;
+        font-style:italic;
+    }
+    span.showerror,
+    span.phperror{
+      color:red;
+      font-weight: 500;
+      font-size:15px;
+      text-decoration:none;
+      margin-top:2px;
+    }
+    .error-msg{
+      border:2px solid red;
+    }
+    .success-msg{
+      border:2px solid green;
+    }
+  </style>
+  <body>
+
+
+
+
+
+
+    <div class="container-fluid bg-secondary main">
+        <div class="row">
+            <div class="col-md-12 ">
+            
+                <div class="signup-form">
+                    <form class="bg-light px-5 py-3 pb-5 mb-1" action="" method="" enctype="multipart/form-data" onsubmit="return getValue()">
+                        <div class="row newrow">
+                          <div class="col-md-12 ">
+
+                            <div class="title  d-flex align-items-center justify-content-center gap-2">
+                            <div class="line"></div>
+                            <h2 class="text-center">Student Marksheet Form</h2>
+                            <div class="line"></div>
+
+                          </div>
+                        
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="container-fluid profilecard">
+                                <div class="profileimg">
+                                    <img src="images/profile.png" id="upload">
+                                </div>
+                                <div class="customfile">
+                                    <label for="fileupload">Upload Profile</label>
+                                    <input type="file" id="fileupload" name="upload_image">
+                                   
+                                </div>
+                    
+                            </div>
+                          </div>
+                         
+                          <div class="d-flex gap-2">
+                           <h5 class="text-secondary">Student Information</h5>
+                           <span class="showerror"></span>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Group" name="group" class="form-control shadow-none" id="gr">
+                           
+                            
+                  
+                           
+                          </div>
+                         
+                          
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Attempts" name="attempts" class="form-control shadow-none">
+                           
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Name" name="uname" class="form-control shadow-none">
+                            
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Father name" name="fname" class="form-control shadow-none">
+                           
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Qualification" name="qualification" class="form-control shadow-none">
+                           
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Month" name="month" class="form-control shadow-none">
+                            
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Regular" name="regular" class="form-control shadow-none">
+                           
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Institute" name="institute" class="form-control shadow-none">
+                           
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Grade" name="grade" class="form-control shadow-none">
+                            
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <input type="text" placeholder="Identity mark" name="identity" class="form-control shadow-none" >
+                           
+                          </div>
+
+                          <div class="d-flex gap-2">
+                          <h5 class="text-secondary">Subject Marks</h5>
+                          <span class="showerror"></span>
+                          </div>
+
+                          <div class="col-md-6 mb-3 removefield">
+                          
+                            <div class="row">
+                            <div class="col-md-5">
+                                <input type="text" placeholder="Subject name" name="subject_name[]" class="form-control shadow-none sub_name" id="sn0">
+                               
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" placeholder="Subject marks" name="subject_marks[]" class="form-control shadow-none sub_marks" id="sm0">
+                                
+                            </div>
+                            <div class="col-md-2">
+                            <button type="button" class="btn btn-danger removeRow">Remove</button>
+                            </div>
+                          </div>
+                    
+                          </div>
+                      
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <div class="row">
+                            <div class="col-md-3">
+                             <label id="addrow" class="btn btn-secondary">Add more subjects</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" name="submit" class="btn btn-primary form-control bg-success" value="Save Now">Save Now</button>
+                         </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>    -->
+    <script>
+
+    
+var inputid=0;
+var inputname="sn";
+var inputmarks="sm";
+
+    function getValue()
+    {
+        //  debugger;
+                var errormsg = "";
+                var check=false;
+                var inputField= document.querySelectorAll("input");
+                // alert(all.length);
+                for (var i=0; i<inputField.length; i++)
+                {
+
+                   var checkisEmpty = inputField[i].value;
+
+                        if(checkisEmpty == '')
+                        {
+                            
+                                inputField[i].classList.add("error-msg");
+                                inputField[i].classList.remove("success-msg");
+                                check = false;
+                                errormsg="*some fields are missing*";
+                                document.querySelector(".showerror").innerHTML = errormsg;
+
+                        }
+                        else
+                        {
+                                inputField[i].classList.add("success-msg");
+                                inputField[i].classList.remove("error-msg");
+                                check = true;
+                        }
+                }
+	if(check == true){
+		alert('form validated');}
+        return check;
+            
+    }
+    
+    
+        $(function(){
+            $("#fileupload").change(function(event){
+                var x = URL.createObjectURL(event.target.files[0]);
+                $("#upload").attr("src",x);
+              
+            });
+        });
+
+        $("#addrow").click(function () {
+          inputid++;
+          var snid = inputname + inputid;
+          var smid = inputmarks + inputid;
+
+            var html = '';
+            html += '<div class="col-md-6 mb-3 removefield">';
+            html += '<div class="row">';
+
+            html += '<div class="col-md-5">';
+            html += '<input type="text" placeholder="Subject name" name="subject_name[]" class="form-control shadow-none sub_name" id="'+snid+'">';
+
+            html +='<span class="showerror" ></span>';
+            html += '</div>';
+
+            html += '<div class="col-md-5">';
+            html += '<input type="text" placeholder="Subject marks" name="subject_marks[]" class="form-control shadow-none sub_marks" id="'+smid+'">';
+            html +='<span class="showerror" ></span>';
+            html += '</div>';
+            html+='<div class="col-md-2">';
+            html += ' <button type="button" class="btn btn-danger removeRow">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+          
+
+            $('.newrow').append(html);
+        });
+        $(document).on('click', '.removeRow', function () {
+            $(this).closest('.removefield').remove();
+        });
+    </script>
+  </body>
+</html>
